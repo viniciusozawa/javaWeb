@@ -4,6 +4,8 @@
  */
 package br.edu.ifsuldeminas.viniciusozawainfoh.controller;
 
+import br.edu.ifsuldeminas.viniciusozawainfoh.modelo.dao.CidadeDao;
+import br.edu.ifsuldeminas.viniciusozawainfoh.modelo.entity.Cidade;
 import br.edu.ifsuldeminas.viniciusozawainfoh.servico.WebConstante;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -20,12 +22,35 @@ import java.io.IOException;
 @WebServlet(WebConstante.BASE_PATH+"/CidadeControlador")
 //designar uma classe como um servelts, mapeando de URL no Servidor Web(GlassFish)
 public class CidadeControlador extends HttpServlet{
+    
+    Cidade objCidade = new Cidade();
+    CidadeDao objCidadeDaO = new CidadeDao();
+    String nomeCidade=""; 
+    String ufCidade= "";
+    String opcao = "";
+    @Override
+    public void init() throws ServletException {
+     
+    }
 
+    
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         super.doGet(request, response); 
         
         try {
+            opcao = request.getParameter("opcao");
+            if (opcao == null || opcao.isEmpty()) {
+                opcao = "cadastrar";
+            }
+            nomeCidade = request.getParameter("nomeCidade");
+            ufCidade = request.getParameter("ufCidade");
+            
+            switch (opcao) {
+                case "cadastrar": //cadastrar(request, response); break
+                    
+            }
             
         } catch (NumberFormatException e) {
             response.getWriter().println("Erro: um ou mais parametros não são número válido"+e.getMessage());
@@ -35,5 +60,8 @@ public class CidadeControlador extends HttpServlet{
     }
     
     
+    private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        objCidade.setNomeCidade(nomeCidade);
+    }
     
 }

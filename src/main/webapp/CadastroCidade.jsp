@@ -16,7 +16,7 @@
         <h1>Hello World!</h1>
         <form type="hidden" name="cadastro" method="get" 
               action="${pageContext.request.contextPath}${URL_BASE}/CidadeControlador">
-
+            <input type="hidden" id="opcao" name="opcao" value="${opcao}">
             <p><label>Cidade:</label> <input type="text" name="nomeCidade" value="" size="40"></p>
             <p><label>UF:</label> <input type="text" name="ufCidade" value="" size="5"></p>
             <input type="submit" value="Salvar" name="Salvar">
