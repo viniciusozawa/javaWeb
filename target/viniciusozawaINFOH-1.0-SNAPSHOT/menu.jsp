@@ -16,11 +16,15 @@
         <nav>
             <ul>
                 <li><a href="${pageContext.request.contextPath}/index.jsp">HOME</a></li>
-                <li><a href="url"></a></li>
-                <li><a href="url"></a></li>
+                <li><a href="${pageContext.request.contextPath}${URL_BASE}/CidadeControlador">CIDADE</a></li>
+                <li><a href="${pageContext.request.contextPath}${URL_BASE}/FuncionarioControlado">FUNCIONÁRIO</a></li>
+                <li><a href="${pageContext.request.contextPath}/login.jsp">LOGIN</a></li>
+                <li><a href="${pageContext.request.contextPath}/logout.jsp">LOGOUT</a></li>
+                
+                
             </ul>
 
         </nav>
-        <h1>Hello World!</h1>
+        
     </body>
 </html>
