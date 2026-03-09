@@ -7,12 +7,14 @@ package br.edu.ifsuldeminas.viniciusozawainfoh.controller;
 import br.edu.ifsuldeminas.viniciusozawainfoh.modelo.dao.CidadeDao;
 import br.edu.ifsuldeminas.viniciusozawainfoh.modelo.entity.Cidade;
 import br.edu.ifsuldeminas.viniciusozawainfoh.servico.WebConstante;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 /**
  *
@@ -66,6 +68,15 @@ public class CidadeControlador extends HttpServlet{
         objCidade.setUfCidade(ufCidade);
         System.out.println("chegou");
         objCidadeDaO.salvar(objCidade);
+        request.setAttribute("mensagem", "Cidade cadastrada com sucesso!");
+        encaminharParaPagina(request, response);
+    }
+    
+    private void encaminharParaPagina(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        List<Cidade> cidades = objCidadeDaO.buscarTodasCidade();
+        request.setAttribute("cidades", cidades);
+        RequestDispatcher dispather = request.getRequestDispatcher("CadastroCidade.jsp");
+        dispather.forward(request, response);
     }
     
 }
