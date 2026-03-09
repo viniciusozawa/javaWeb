@@ -48,8 +48,9 @@ public class CidadeControlador extends HttpServlet{
             ufCidade = request.getParameter("ufCidade");
             
             switch (opcao) {
-                case "cadastrar": //cadastrar(request, response); break
-                    
+                case "cadastrar": 
+                    cadastrar(request, response); 
+                break;
             }
             
         } catch (NumberFormatException e) {
@@ -62,6 +63,9 @@ public class CidadeControlador extends HttpServlet{
     
     private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         objCidade.setNomeCidade(nomeCidade);
+        objCidade.setUfCidade(ufCidade);
+        System.out.println("chegou");
+        objCidadeDaO.salvar(objCidade);
     }
     
 }
