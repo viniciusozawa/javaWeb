@@ -1,0 +1,12 @@
+br\edu\ifsuldeminas\viniciusozawainfoh\modelo\entity\Cidade.class
+br\edu\ifsuldeminas\viniciusozawainfoh\controller\CidadeControlador.class
+br\edu\ifsuldeminas\viniciusozawainfoh\servico\ConfigListener.class
+br\edu\ifsuldeminas\viniciusozawainfoh\modelo\dao\CidadeDao.class
+br\edu\ifsuldeminas\viniciusozawainfoh\modelo\dao\CidadeDao$CidadeRowMapper.class
+br\edu\ifsuldeminas\viniciusozawainfoh\servico\ConverteData.class
+br\edu\ifsuldeminas\viniciusozawainfoh\servico\WebConstante.class
+br\edu\ifsuldeminas\viniciusozawainfoh\resources\JakartaEE10Resource.class
+br\edu\ifsuldeminas\viniciusozawainfoh\modelo\dao\ConnectionFactory.class
+br\edu\ifsuldeminas\viniciusozawainfoh\modelo\dao\RowMapper.class
+br\edu\ifsuldeminas\viniciusozawainfoh\JakartaRestConfiguration.class
+br\edu\ifsuldeminas\viniciusozawainfoh\modelo\dao\GenericoDAO.class

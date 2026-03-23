@@ -1,0 +1,30 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 2 de mar de 2026, 13:41:11
+    Author     : 02338079698
+*/
+
+nav ul{
+    list-style-type: none; /* remove os marcadores de lista*/
+    padding: 10px;/* espaço entre as bordas da lista*/
+    background-color: #333; /*cor de fundo da barra de navegação*/
+}
+
+nav ul li{
+    display: inline; /* exibe os itens da lista lado a lado*/
+    margin-right: 10px; /* espaçamento entre os itens*/
+}
+
+nav ul li a{
+    color:white; /* cor do texto dos links*/
+    text-decoration: none; /*remove o sublinhado dos links*/
+    font-weight: bold; /*texto dos links em negrito*/
+}
+
+nav ul li a:hover{
+    color:#ccc; /*cor do texto dos links ao passar o mouse*/
+}
+
