@@ -21,12 +21,12 @@ public class CidadeDao extends GenericoDAO<Cidade>{
     
     public void alterar(Cidade objCidade){
         String sql = "UPDATE CIDADE SET NOME = ? , UF = ? WHERE CODIGO=?";
-        save(sql, objCidade.getNomeCidade(), objCidade.getUfCidade());
+        save(sql, objCidade.getNomeCidade(), objCidade.getUfCidade(), objCidade.getCodCidade());
         
     }
     public void excluir(Cidade objCidade){
         String sql = "DELETE FROM CIDADE WHERE CODIGO=?";
-        save(sql, objCidade.getNomeCidade(), objCidade.getUfCidade());
+        save(sql, objCidade.getCodCidade());
         
     }
     
